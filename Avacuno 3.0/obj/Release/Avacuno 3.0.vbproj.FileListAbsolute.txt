@@ -1,0 +1,2 @@
+T:\SOURCE_CODE_WORKING\SMT\Applications\Avacuno\3.0\Avacuno 3.0\bin\Release\Avacuno 3.0.exe.config
+T:\SOURCE_CODE_WORKING\SMT\Applications\Avacuno\3.0\Avacuno 3.0\obj\Release\ResolveAssemblyReference.cache

@@ -1,0 +1,109 @@
+﻿<Window x:Class="Avacuno_Form"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:uc="clr-namespace:SMT.THX.MediaDirector.UI.WPF.StreamVizualization;assembly=SMT.THX.MediaDirector"
+    Title="SMT Avacuno" Height="612" Width="566" SnapsToDevicePixels="True" ResizeMode="NoResize" Icon="/Avacuno;component/Resources/avacuno_icon.ico">
+    <Canvas x:Name="cvLayoutRoot" Background="DarkGray">
+        <!-- MENUS -->
+        <Menu Height="23" Width="270" Canvas.Left="3" Canvas.Top="3">
+            <MenuItem Header="File" x:Name="mnuFile">
+                <MenuItem Header="Select Stream" x:Name="miSelectStream" Margin="0,2,0,0"/>
+                <Separator/>
+                <MenuItem Header="New Project" x:Name="miNewProject" />
+                <MenuItem Header="Open Project" x:Name="miOpenProject" />
+                <MenuItem Header="Save Project" x:Name="miSaveProject" />
+                <MenuItem Header="Save Project As" x:Name="miSaveProjectAs" />
+                <MenuItem Header="Close Project" x:Name="miCloseProject" />
+                <Separator/>
+                <MenuItem Header="Recent Files" x:Name="miRecentFiles" />
+                <Separator/>
+                <MenuItem Header=" Export" x:Name="miExport" Margin="10,0,0,0">
+                    <MenuItem Header="MediaDirector Binary" x:Name="miExportBinary" />
+                    <MenuItem Header="MediaDirector XML" x:Name="miExportXML" />
+                </MenuItem>
+                <MenuItem Header=" Import" x:Name="miImport" Margin="10,0,0,0">
+                    <MenuItem Header="MediaDirector Binary" x:Name="miImportBinary" />
+                    <MenuItem Header="MediaDirector XML" x:Name="miImportXML" />
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Exit" x:Name="miExit" />
+            </MenuItem>
+            <MenuItem Header="Play Control" x:Name="mnuPlayControl">
+                <MenuItem Header="Play" x:Name="miPlay" Margin="0,2,0,0"/>
+                <MenuItem Header="Pause" x:Name="miPause"/>
+                <MenuItem Header="Stop" x:Name="miStop"/>
+                <MenuItem Header="Fast Forward" x:Name="miFastForward"/>
+                <MenuItem Header="Rewind" x:Name="miRewind"/>
+                <Separator/>
+                <MenuItem Header="Restart Stream" x:Name="miRestart"/>
+                <MenuItem Header="Jump Back" x:Name="miJumpBack"/>
+                <MenuItem Header="Frame Step" x:Name="miFrameStep"/>
+                <MenuItem Header="Time Search" x:Name="miTimeSearch" />
+            </MenuItem>
+            <MenuItem Header="Tools" x:Name="mnuTools">
+                <MenuItem Header="BBD Viewer" x:Name="miBBDViewer"  Margin="0,2,0,0"/>
+                <MenuItem Header="Decoder OSD" x:Name="miDecoderOSD"  Margin="0,2,0,0"/>
+                <MenuItem Header="Options" x:Name="miOptions"  Margin="0,2,0,0"/>
+            </MenuItem>
+            <MenuItem Header="Windows" x:Name="mnuWindows">
+                <MenuItem Header="Decoder Properties" x:Name="miDecoderProperties"  Margin="0,2,0,0"/>
+                <MenuItem Header="Renderer Properties" x:Name="miRendererProperties" />
+                <MenuItem Header="Multi-Monitor Manager" x:Name="miMultiMonitorManager" />
+            </MenuItem>
+            <MenuItem Header="Help" x:Name="mnuHelp">
+                <MenuItem Header="User Manual" x:Name="miUserManual"  Margin="0,2,0,0"/>
+                <MenuItem Header="Online Support" x:Name="miOnlineSupport" />
+                <MenuItem Header="SMT Home Page" x:Name="miSMTHomePage" />
+                <MenuItem Header="Licensing" x:Name="miLicensing" />
+                <MenuItem Header="About" x:Name="miAbout" />
+            </MenuItem>
+        </Menu>
+        <Border Background="WhiteSmoke" BorderBrush="LightGray" BorderThickness="2" Canvas.Left="310" Canvas.Top="375" CornerRadius="10,10,10,10" Height="202" Width="149">
+            <Canvas Name="cvTransport">
+                <Canvas Name="cvOtherTransportControls">
+                    <TextBox Background="AliceBlue" Canvas.Left="13" Canvas.Top="12" ClipToBounds="True" Cursor="Arrow" FontSize="15" FontWeight="Bold" Height="27" IsReadOnly="True" IsUndoEnabled="False" Name="txtPlayState" TextAlignment="Center" Width="120">---</TextBox>
+                    <TextBox Background="AliceBlue" Canvas.Left="13" Canvas.Top="38" Cursor="Arrow" FontSize="15" FontWeight="Bold" Height="27" IsReadOnly="True" IsUndoEnabled="False" Name="txtRunningTime" TextAlignment="Center" Width="120">0:00:00;00</TextBox>
+                    <TextBox Background="AliceBlue" Canvas.Left="13" Canvas.Top="64" Cursor="Arrow" FontSize="15" FontWeight="Bold" Height="27" IsReadOnly="True" IsUndoEnabled="False" Name="txtPTS" TextAlignment="Center" ToolTip="Current PTS" Width="120">---</TextBox>
+                    <Button Canvas.Left="7" Canvas.Top="96" Height="29" Name="btnStop" Width="63">Stop</Button>
+                    <Button Canvas.Left="7" Canvas.Top="129" Height="29" Name="btnRewind" Width="63">&lt;&lt;</Button>
+                    <Button Canvas.Left="74" Canvas.Top="129" Height="29" Name="btnFastForward" Width="63">&gt;&gt;</Button>
+                    <Button Canvas.Left="8" Canvas.Top="161" Height="23" Name="btnRestartStream" Width="40">|&gt;</Button>
+                    <Button Canvas.Left="53" Canvas.Top="161" Height="23" Name="btnJumpBack" Width="40">|&lt;</Button>
+                    <Button Canvas.Left="98" Canvas.Top="161" Height="23" Name="btnFrameStep" Width="40">|</Button>
+                </Canvas>
+                <Canvas Name="cvPlayBtn">
+                    <Button Canvas.Left="74" Canvas.Top="96" Height="29" Name="btnPlayPause" Width="63">Play</Button>
+                </Canvas>
+            </Canvas>
+        </Border>
+        <Border Background="WhiteSmoke" BorderBrush="LightGray" BorderThickness="2" Canvas.Left="4" Canvas.Top="375" ClipToBounds="True" CornerRadius="10,10,10,10" Height="155" Width="149">
+            <Canvas Height="138">
+                <TextBox Background="AliceBlue" Canvas.Left="11" Canvas.Top="4" Cursor="Arrow" FontSize="15" FontWeight="Bold" Height="27" IsReadOnly="True" IsUndoEnabled="False" Name="txtVid_PID" TextAlignment="Center" ToolTip="Elementary Stream PID" Width="124">---</TextBox>
+                <TextBox Background="AliceBlue" Canvas.Left="11" Canvas.Top="30" Cursor="Arrow" FontSize="15" FontWeight="Bold" Height="27" IsReadOnly="True" IsUndoEnabled="False" Name="txtVid_Duration" TextAlignment="Center" ToolTip="Stream Duration" Width="124">---</TextBox>
+                <TextBox Background="AliceBlue" Canvas.Left="11" Canvas.Top="56" Cursor="Arrow" FontSize="15" FontWeight="Bold" Height="27" IsReadOnly="True" IsUndoEnabled="False" Name="txtVid_Compression" TextAlignment="Center" ToolTip="Compression Format" Width="124">---</TextBox>
+                <TextBox Background="AliceBlue" Canvas.Left="11" Canvas.Top="82" Cursor="Arrow" FontSize="15" FontWeight="Bold" Height="27" IsReadOnly="True" IsUndoEnabled="False" Name="txtVid_Framerate" TextAlignment="Center" ToolTip="Video Framerate" Width="124">---</TextBox>
+                <TextBox Background="AliceBlue" Canvas.Left="11" Canvas.Top="108" Cursor="Arrow" FontSize="15" FontWeight="Bold" Height="27" IsReadOnly="True" IsUndoEnabled="False" Name="txtVid_ImageHeight" TextAlignment="Center" ToolTip="Image Resolution" Width="124">---</TextBox>
+            </Canvas>
+        </Border>
+        <Border Background="WhiteSmoke" BorderBrush="LightGray" BorderThickness="2" Canvas.Left="157" Canvas.Top="375" ClipToBounds="True" CornerRadius="10,10,10,10" Height="155" Width="149">
+            <Canvas Height="138">
+                <TextBox Background="AliceBlue" Canvas.Left="11" Canvas.Top="4" Cursor="Arrow" FontSize="15" FontWeight="Bold" Height="27" IsReadOnly="True" IsUndoEnabled="False" Name="txtAud_PID" TextAlignment="Center" ToolTip="Elementary Stream PID" Width="124">---</TextBox>
+                <TextBox Background="AliceBlue" Canvas.Left="11" Canvas.Top="30" Cursor="Arrow" FontSize="15" FontWeight="Bold" Height="27" IsReadOnly="True" IsUndoEnabled="False" Name="txtAud_Compression" TextAlignment="Center" ToolTip="Stream Duration" Width="124">---</TextBox>
+                <TextBox Background="AliceBlue" Canvas.Left="11" Canvas.Top="56" Cursor="Arrow" FontSize="15" FontWeight="Bold" Height="27" IsReadOnly="True" IsUndoEnabled="False" Name="TextBox3" TextAlignment="Center" ToolTip="Compression Format" Width="124">---</TextBox>
+                <TextBox Background="AliceBlue" Canvas.Left="11" Canvas.Top="82" Cursor="Arrow" FontSize="15" FontWeight="Bold" Height="27" IsReadOnly="True" IsUndoEnabled="False" Name="TextBox4" TextAlignment="Center" ToolTip="Video Framerate" Width="124">---</TextBox>
+                <TextBox Background="AliceBlue" Canvas.Left="11" Canvas.Top="108" Cursor="Arrow" FontSize="15" FontWeight="Bold" Height="27" IsReadOnly="True" IsUndoEnabled="False" Name="TextBox5" TextAlignment="Center" ToolTip="Image Resolution" Width="124">---</TextBox>
+            </Canvas>
+        </Border>
+        <Border x:Name="bdFileSelection" Background="WhiteSmoke" BorderBrush="LightGray" BorderThickness="2" Canvas.Left="4" Canvas.Top="29" CornerRadius="10,10,10,10" Height="112" Width="354">
+            <Canvas Name="Canvas1" Height="101" Width="343" Canvas.Left="0" Canvas.Top="0">
+                <ListBox Canvas.Left="0" Canvas.Top="1" Height="100" Name="lbFiles" Width="306" />
+                <Button Canvas.Left="312" Canvas.Top="7" Height="23" Name="btnAddFile" Width="27" FontWeight="Bold">+</Button>
+                <Button Canvas.Left="312" Canvas.Top="32" FontWeight="Bold" Height="23" Name="btnRemoveFile" Width="27">-</Button>
+                <Button Canvas.Left="312" Canvas.Top="58" FontWeight="Bold" Height="23" Name="btnClearFileList" Width="27">_</Button>
+            </Canvas>
+        </Border>
+        <Border Background="WhiteSmoke" BorderBrush="LightGray" BorderThickness="2" Canvas.Left="4" Canvas.Top="147" CornerRadius="10,10,10,10" Height="222" Width="550">
+            <uc:StreamViz_UserControl Width="524" Height="200"></uc:StreamViz_UserControl>
+        </Border>
+    </Canvas>
+</Window>

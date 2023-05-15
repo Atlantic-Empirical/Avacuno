@@ -1,0 +1,577 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SMT.THX.MediaDirector
+</name>
+</assembly>
+<members>
+<member name="M:SMT.THX.MediaDirector.UI.WPF.StreamVizualization.StreamViz_UserControl.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:SMT.THX.MediaDirector.UI.WPF.StreamVizualization.StreamViz_UserControl">
+	<summary>
+StreamViz_UserControl
+</summary>
+</member><member name="M:SMT.THX.MediaDirector.UI.WPF.DescriptorVizualization.ucMD_CD_VD_DescriptorSet.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:SMT.THX.MediaDirector.UI.WPF.DescriptorVizualization.ucMD_CD_VD_DescriptorSet">
+	<summary>
+ucMD_CD_VD_DescriptorSet
+</summary>
+</member><member name="M:SMT.THX.MediaDirector.UI.WPF.DescriptorVizualization.ucMD_CD_AD_DescriptorSet.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:SMT.THX.MediaDirector.UI.WPF.DescriptorVizualization.ucMD_CD_AD_DescriptorSet">
+	<summary>
+ucMD_CD_AD_DescriptorSet
+</summary>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Video.cMD_CD_VD_ProcessingFlags.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="P:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_AuthoringInfoTable.Base_Length">
+	<summary>
+ Provides the length without text data.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_AuthoringInfoTable.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="T:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_AuthoringInfoTable">
+	<summary>
+ Section 4.5
+ Spec version 0.8.2
+ </summary>
+	<remarks></remarks>
+</member><member name="P:SMT.THX.MediaDirector.Formats.Bluray.Streem.Project.cMD_PRJ_Bluray_Stream.VideoDescriptors">
+	<summary>
+ Packs all of the primary and secondary video descriptors.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SMT.THX.MediaDirector.Formats.Bluray.Streem.Project.cMD_PRJ_Bluray_Stream.AudioDescriptors">
+	<summary>
+ Packs all of the primary and secondary audio descriptors.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SMT.THX.MediaDirector.Formats.Bluray.Streem.Project.cMD_PRJ_Bluray_Stream.GraphicsDescriptors">
+	<summary>
+ Packs all of the interactive, presentation, textst graphics descriptors.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Streem.Project.cMD_PRJ_Bluray_Stream.UpdateDescriptorSet(SMT.THX.MediaDirector.Formats.Shared.Elements.cMD_LinearItem@,SMT.THX.MediaDirector.ContentDescriptors.cMD_CD_ContentDescriptorBase)">
+	<summary>
+ An app calls this when the user has made changes to a descriptor set.
+ The updated set is passed in and the stored set must be matched and modified.
+ </summary>
+	<param name="LI"></param>
+	<param name="UpdatedDescriptorSet"></param>
+	<remarks></remarks>
+</member><member name="P:SMT.THX.MediaDirector.Formats.Bluray.Streem.Project.cMD_PRJ_Bluray_Stream.LookupLinearItemForModification(SMT.THX.MediaDirector.Formats.Shared.Elements.cMD_LinearItem)">
+	<summary>
+ This method allows a client app to easily get a reference to the stored linearitem so it can modify
+ its data. Such as when the player throws bardatachanged and the app needs to update the descriptor set.
+ </summary>
+	<param name="LI"></param>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SMT.THX.MediaDirector.Formats.Bluray.Streem.Project.cMD_PRJ_Bluray_Stream.DescriptorForPTS(SMT.Multimedia.Classes.cStreamInfo,System.UInt64)">
+	<summary>
+ Can be used to get master or modifiers.
+ To get master submit PTS_Start = 0
+ </summary>
+	<param name="SI"></param>
+	<param name="PTS_Start"></param>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_GMDLUR.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Shared.IO.CRC32.BuildTable(System.Int32)">
+	<summary>
+ Generates the CRC32 Table
+ </summary>
+	<param name="Polynomial">A polynomial that should be used to generate the table.</param>
+	<returns>The CRC32 Table based on the Polynomial given</returns>
+</member><member name="F:SMT.THX.MediaDirector.ContentDescriptors.cMD_CD_ContentDescriptorSetBase.Inherit">
+	<summary>
+ If this CD is a placeholder (the values are actually inheited from a different element's descriptor
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.THX.MediaDirector.ContentDescriptors.cMD_CD_ContentDescriptorSetBase.InheritsFromID">
+	<summary>
+ The DescriptorID of the CD that this CD inherits from.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Audio.cMD_CD_AD_SurroundEncoding.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetaDataPacketTable_Audio.#ctor(System.IO.Stream@,SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_StreamIndexTable@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetaDataPacketTable_Audio.ReadFromStream(System.IO.Stream@,SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_StreamIndexTable@)">
+	<summary>
+ Used by the BD Stream classes.
+ </summary>
+	<param name="STR"></param>
+	<param name="SIT"></param>
+	<remarks></remarks>
+</member><member name="T:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetaDataPacketTable_Audio">
+	<summary>
+ Section 4.6
+ Spec version 0.8.2
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_SectionOffsetTable.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="T:SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_SectionOffsetTable">
+	<summary>
+ Section 4.2.2
+ Spec version 0.8.2
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.DVD.cMD_PRJ_DVDVideo.ImportValuesFromSMTDVDObject">
+	<summary>
+ Parses the DVD object for information that can be interpreted for use as content descriptors. NOT IMPLEMENTED.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.DVD.cMD_PRJ_DVDVideo.PopulateTLWithDVDDescriptorSet(SMT.THX.MediaDirector.Formats.DVD.cDVDDescriptorSet,DevExpress.XtraTreeList.Nodes.TreeListNode@)">
+	<summary>
+ To be used by ALL functions that import any sort of data/file containing descriptors.
+ They all will first go to a cDVDDescriptorSet then use this method to go to the TreeList.
+ </summary>
+	<param name="DS"></param>
+	<param name="RootTLN"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_FileHeader.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="T:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_FileHeader">
+	<summary>
+ Section 4.4
+ Spec version 0.8.2
+ Length = 12 bytes.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Audio.cMD_CD_AD_LFEChannels.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Audio.cMD_CD_AD_LFEChannels.WriteToStream(System.IO.Stream@)">
+	<summary>
+ Stream must be at the same byte that contains LFE Monitoring level
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Audio.cMD_CD_AD_LFEChannels.ReadFromStream(System.IO.Stream@)">
+	<summary>
+ The stream must be positioned at the same byte that contains LFE Monitoring Level.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="P:SMT.THX.MediaDirector.UI.WPF.DescriptorVizualization.ucMD_CD_VD_DescriptorSet.MasterDescriptorSet">
+	<summary>
+ If this control is displaying a modifier MasterDescriptorSet must be set before DescriptorSet.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Video.cMD_CD_VD_ContentType.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataMasterRecord_Audio.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="T:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataMasterRecord_Audio">
+	<summary>
+ Section 4.7.1
+ Spec version 0.8.2
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_ClipInformationMap.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="T:SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_ClipInformationMap">
+	<summary>
+ Section 4.2.4
+ Spec version 0.8.2
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_StreamIndexTable.#ctor(System.IO.Stream@,SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_ClipInformationMap@,SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_StreamOffsetTable@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="T:SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_StreamIndexTable">
+	<summary>
+ Section 4.2.6
+ Spec version 0.8.2
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Audio.cMD_CD_AD_SurroundSpeakerPosition.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Video.cMD_CD_VD_Range.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="F:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataModifierRecord_Video.ModifierMask">
+	<summary>
+ Video Modifier Mask is a 32-bit mask. Each bit represents a Media Director Content Descriptor. 
+ A value of one (1b) indicates that the corresponding descriptor is present. The bit mask also 
+ defines the structure of its Modifier Data, as the Modifier Data only contains the values of those 
+ descriptors with bits that have a value of 1b.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataModifierRecord_Video.ModifierData">
+	<summary>
+ Section 4.6.2.2
+ Spec Version 0.8.2
+ 
+ The structure of the Video Modifier Data depends on its Video Modifier Mask, including the length, 
+ the order and the data counts. The corresponding Content Descriptor of the first bit with value 1 
+ in the mask indicates the starting point of the Video Modifier Data, followed by the next Content 
+ Description with a bit value 1 in the mask, and so on. The length of Video Modifier Data is the 
+ total length of all Content Descriptors with value 1 in the mask.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataModifierRecord_Video.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="T:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataModifierRecord_Video">
+	<summary>
+ Section 4.6.2
+ Spec version 0.8.2
+ 
+ Each Metadata Modifier record consists of two sections: Modifier Mask and Modifier Data. 
+ The Modifier Mask specifies which Media Director Content Descriptors are present, while the 
+ Modifier Data details the values of those descriptors.
+ 
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Graphics.cMD_CD_GR_DescriptorSet.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Video.cMD_CD_VD_Cadence.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Video.cMD_CD_VD_ColorProfile.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_ElementBase.WriteToStream(System.IO.Stream@)">
+	<summary>
+ It is assummed that the MS is passed in already at the correct position to begin writing the requested structure.
+ </summary>
+	<param name="MS"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_ElementBase.ReadFromStream(System.IO.Stream@)">
+	<summary>
+ The stream must be positioned at the first byte of this structure before this method is called.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_StreamOffsetTable.#ctor(System.IO.Stream@,SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_ClipInformationMap@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="T:SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_StreamOffsetTable">
+	<summary>
+ Section 4.2.5
+ Spec version 0.8.2
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Video.cMD_CD_VD_InterlacedProgressiveFlag.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataPacketTable_Video.#ctor(System.IO.Stream@,SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_StreamIndexTable@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataPacketTable_Video.ReadFromStream(System.IO.Stream@,SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_StreamIndexTable@)">
+	<summary>
+ Used by the BD Stream classes.
+ </summary>
+	<param name="STR"></param>
+	<param name="SIT"></param>
+	<remarks></remarks>
+</member><member name="T:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataPacketTable_Video">
+	<summary>
+ Section 4.6
+ Spec version 0.8.2
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Video.cMD_CD_VD_ActiveVideoArea.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataMasterRecord_Video.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="T:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataMasterRecord_Video">
+	<summary>
+ Section 4.6.1
+ Spec version 0.8.2
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Audio.cMD_CD_AD_LFEMonitoringLevel.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Audio.cMD_CD_AD_LFEMonitoringLevel.WriteToStream(System.IO.Stream@)">
+	<summary>
+ The stream MUST be positioned at the same byte that holds LFE Channels.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Audio.cMD_CD_AD_LFEMonitoringLevel.ReadFromStream(System.IO.Stream@)">
+	<summary>
+ The stream must be positioned at the same byte that holds LFE Channels.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="F:SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_AVMDLUR.RBN_TopSIT">
+	<summary>
+ This provides the offset to this structure from the top of its parent
+ Stream Index Table.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_AVMDLUR.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Streem.IO.Binary.Elements.cMD_EL_BRSTR_AVMDLUR.cMD_EL_BRSTR_AVMDLUR_MOD.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Audio.cMD_CD_AD_ReferenceLevel.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Video.cMD_CD_VD_BaseFrameRate.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Audio.cMD_CD_AD_ProcessingFlags.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Video.cMD_CD_VD_BarInformation.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Video.cMD_CD_VD_WhitePoint.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Audio.cMD_CD_AD_MainChannels.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Video.cMD_CD_VD_Gamma.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Audio.cMD_CD_AD_ContentType.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Audio.cMD_CD_AD_DescriptorSet.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Video.cMD_CD_VD_DescriptorSet.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.ContentDescriptors.Video.cMD_CD_VD_PixelAspectRatio.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="F:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataModifierRecord_Audio.ModifierMask">
+	<summary>
+ Audio Modifier Mask is a 32-bit mask. Each bit represents a Media Director Content Descriptor. 
+ A value of one (1b) indicates that the corresponding descriptor is present. The bit mask also 
+ defines the structure of its Modifier Data, as the Modifier Data only contains the values of those 
+ descriptors with bits that have a value of 1b.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataModifierRecord_Audio.ModifierDataBitLength">
+	<summary>
+ Length in bits of the modifier data. See 4.6.2.1
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataModifierRecord_Audio.ModifierData">
+	<summary>
+ Section 4.6.2.2
+ Spec Version 0.8.2
+ 
+ The structure of the Audio Modifier Data depends on its Audio Modifier Mask, including the length, 
+ the order and the data counts. The corresponding Content Descriptor of the first bit with value 1 
+ in the mask indicates the starting point of the Audio Modifier Data, followed by the next Content 
+ Description with a bit value 1 in the mask, and so on. The length of Audio Modifier Data is the 
+ total length of all Content Descriptors with value 1 in the mask.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataModifierRecord_Audio.#ctor(System.IO.Stream@)">
+	<summary>
+ This constructor is used to instantiate this object usually from a FileStream.
+ Note: The stream must be queued to the start byte of this structure before calling the constructor.
+ </summary>
+	<param name="STR"></param>
+	<remarks></remarks>
+</member><member name="T:SMT.THX.MediaDirector.Formats.Bluray.Shared.IO.Binary.BaseElements.cMD_EL_SHR_MetadataModifierRecord_Audio">
+	<summary>
+ Section 4.7.2
+ Spec version 0.8.2
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.THX.MediaDirector.Formats.Shared.Elements.cMD_LinearItem.RBNToTopOfPacketTable">
+	<summary>
+ Used during construction of BBD file. Do not use elsewhere.
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

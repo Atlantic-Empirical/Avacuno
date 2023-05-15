@@ -1,0 +1,102 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Avacuno
+</name>
+</assembly>
+<members>
+<member name="M:Avacuno.Licensing_Dialog.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:Avacuno.Licensing_Dialog">
+	<summary>
+Licensing_Dialog
+</summary>
+</member><member name="M:Avacuno.M2VUserDataStripping_Dialog.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:Avacuno.M2VUserDataStripping_Dialog">
+	<summary>
+M2VUserDataStripping_Dialog
+</summary>
+</member><member name="M:Avacuno.Viewer_Form.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:Avacuno.Viewer_Form">
+	<summary>
+Viewer_Form
+</summary>
+</member><member name="M:Avacuno.Avacuno_Form.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:Avacuno.Avacuno_Form">
+	<summary>
+Avacuno_Form
+</summary>
+</member><member name="M:Avacuno.Application.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:Avacuno.Application.Main">
+	<summary>
+Application Entry Point.
+</summary>
+</member><member name="T:Avacuno.Application">
+	<summary>
+Application
+</summary>
+</member><member name="P:Avacuno.Viewer_Form.ClientSize">
+	<summary>
+ Provides available space for the video window.
+ Setting this sizes the appropriate controls to gurantee that the desired amount of space is available.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Avacuno.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Avacuno.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Avacuno.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:Avacuno.My.MyWpfExtension.Application">
+	<summary>
+ Returns the application object for the running application
+ </summary>
+</member><member name="P:Avacuno.My.MyWpfExtension.Computer">
+	<summary>
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:Avacuno.My.MyWpfExtension.User">
+	<summary>
+ Returns information for the current user.  If you wish to run the application with the current 
+ Windows user credentials, call My.User.InitializeWithWindowsUser().
+ </summary>
+</member><member name="P:Avacuno.My.MyWpfExtension.Log">
+	<summary>
+ Returns the application log. The listeners can be configured by the application's configuration file.
+ </summary>
+</member><member name="P:Avacuno.My.MyWpfExtension.Windows">
+	<summary>
+ Returns the collection of Windows defined in the project.
+ </summary>
+</member><member name="T:Avacuno.My.MyWpfExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for WPF
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

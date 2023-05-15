@@ -1,0 +1,36 @@
+﻿<Application x:Class="Application"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    StartupUri="src\Forms\Avacuno_Form.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Use the Black skin by default -->
+                <ResourceDictionary Source="Resources\Skin\Shared.xaml" />
+                <ResourceDictionary Source="Resources\Skin\Button.xaml" />
+                <ResourceDictionary Source="Resources\Skin\CheckBox.xaml" />
+                <ResourceDictionary Source="Resources\Skin\RadioButton.xaml" />
+                <ResourceDictionary Source="Resources\Skin\ComboBox.xaml" />
+                <ResourceDictionary Source="Resources\Skin\ListBox.xaml" />
+                <ResourceDictionary Source="Resources\Skin\Menu.xaml" />
+                <ResourceDictionary Source="Resources\Skin\ScrollBar.xaml" />
+                <ResourceDictionary Source="Resources\Skin\Expander.xaml" />
+                <ResourceDictionary Source="Resources\Skin\GroupBox.xaml" />
+                <ResourceDictionary Source="Resources\Skin\Label.xaml" />
+                <ResourceDictionary Source="Resources\Skin\TabControl.xaml" />
+                <ResourceDictionary Source="Resources\Skin\ProgressBar.xaml" />
+                <ResourceDictionary Source="Resources\Skin\Slider.xaml" />
+                <ResourceDictionary Source="Resources\Skin\TextBox.xaml" />
+                <ResourceDictionary Source="Resources\Skin\ToolTip.xaml" />
+                <ResourceDictionary Source="Resources\Skin\TreeView.xaml" />
+                <ResourceDictionary Source="Resources\Skin\Frame.xaml" />
+                <ResourceDictionary Source="Resources\Skin\ListView.xaml" />
+                <ResourceDictionary Source="Resources\Skin\ScrollViewer.xaml" />
+                <ResourceDictionary Source="Resources\Skin\ToolBar.xaml" />
+                <ResourceDictionary Source="Resources\Skin\StatusBar.xaml" />
+                <ResourceDictionary Source="Resources\Skin\Window.xaml" />
+                <ResourceDictionary Source="Resources\Skin\NavigationWindow.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

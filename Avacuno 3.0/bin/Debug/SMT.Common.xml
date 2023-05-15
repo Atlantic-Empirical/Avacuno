@@ -1,0 +1,1559 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SMT.Common
+</name>
+</assembly>
+<members>
+<member name="M:SMT.DotNet.Serialization.XML.#ctor">
+	<summary>
+ Class Serialization.XML is not intended to be instantiated.  
+ All methods are Shared methods and should be called directly.
+ </summary>
+	<remarks>Do not instantiate this class.</remarks>
+</member><member name="M:SMT.DotNet.Serialization.XML.SerializeToFile(System.Object,System.String)">
+	<summary>
+ Serializes a given object to the file path specified by <paramref name="aPath"/>, 
+ overwriting the file if it already exists.
+ </summary>
+	<param name="anObject">Object to be serialized</param>
+	<param name="aPath">File path to serialize to</param>
+	<returns><c>True</c> if successful</returns>
+	<remarks>Use to serialize an object to a given file path.</remarks>
+</member><member name="M:SMT.DotNet.Serialization.XML.SerializeToFile(System.Object,System.IO.FileStream)">
+	<summary>
+ Serializes a given object to the current position in the specified file stream.
+ </summary>
+	<param name="anObject">Object to be serialized</param>
+	<param name="aFileStream">FileStream to serialize to</param>
+	<returns><c>True</c> if successful</returns>
+	<remarks>Use to serialize an object to a given file path.</remarks>
+</member><member name="M:SMT.DotNet.Serialization.XML.SerializeToString(System.Object)">
+	<summary>
+ Serializes a given object to a string and returns the string.
+ </summary>
+	<param name="anObject">Object to be serialized</param>
+	<returns>String containing the serialized object</returns>
+	<remarks>Use to serialize an object to a string.</remarks>
+</member><member name="M:SMT.DotNet.Serialization.XML.DeserializeFromFile(System.Type,System.String)">
+	<summary>
+ Deserializes an object of the specified type from the given file path.
+ </summary>
+	<param name="aPath">Path to existing file</param>
+	<param name="aType">Type of object to deserialize</param>
+	<returns>Object loaded from the file</returns>
+	<remarks>Use to deserialize an object of a known type from a given file path.</remarks>
+</member><member name="M:SMT.DotNet.Serialization.XML.DeserializeFromFile(System.Type,System.IO.FileStream)">
+	<summary>
+ Deserializes an object of the specified type from the current position 
+ in the specified file stream.
+ </summary>
+	<param name="aType">Type of object to deserialize</param>
+	<param name="aFileStream">Filestream from which to load object</param>
+	<returns>Object loaded from the file</returns>
+	<remarks>Use to deserialize an object of a known type from a given file stream.</remarks>
+</member><member name="M:SMT.DotNet.Serialization.XML.DeserializeFromString(System.Type,System.String)">
+	<summary>
+ Deserializes an object of the specified type from the given string data.
+ </summary>
+	<param name="aType">Type of objet to deserialize</param>
+	<param name="text">String text from which to load object</param>
+	<returns>Object loaded from the string</returns>
+	<remarks>Use to deserialize an object of a known type from a given string.</remarks>
+</member><member name="T:SMT.DotNet.Serialization.XML">
+	<summary>
+ Provides standard XML serialization operations for serializing and 
+ deserializing objects to files or strings.  Methods are shared and 
+ should be called directly.  There is no need to instantiate this 
+ object.
+ </summary>
+	<remarks>Use the shared methods in this object to serialize and 
+ deserialize objects in XML format.</remarks>
+</member><member name="M:SMT.DotNet.Serialization.Binary.#ctor">
+	<summary>
+ Class Serialization.Binary is not intended to be instantiated.  
+ All methods are Shared methods and should be called directly.
+ </summary>
+	<remarks>Do not instantiate this class.</remarks>
+</member><member name="T:SMT.DotNet.Serialization.Binary">
+	<summary>
+ Not yet implemented.
+ </summary>
+	<remarks>Not yet implemented.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.#ctor">
+	<summary>
+ Default constructor for the <i>cTimecode_MRJ</i> object.
+ </summary>
+	<remarks>Use to create a new <i>cTimecode_MRJ</i> object with default values
+ (NTSC-NDF 00:00:00:00).</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.#ctor(SMT.Multimedia.Utility.Timecode.eTimecodeFormat,System.Boolean,System.String)">
+	<summary>
+ Constructor for the <i>cTimecode_MRJ</i> object in which 
+ timecode format and value are specified.
+ </summary>
+	<param name="aTCFormat">Timecode format</param>
+	<param name="aDropFrame">Drop Frame indicator</param>
+	<param name="aTimecode">Timecode value (in string format)</param>
+	<remarks>Use to create a new <i>cTimecode_MRJ</i> instance with specified values.</remarks>
+</member><member name="F:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.__DefaultNTSCDelimiters">
+	<summary>
+ [Private, Shared] Default format string to use for all new NTSC timecode instances.  Modified with <i>SetDefaultNTSCDelimiters</i>.
+ </summary>
+</member><member name="F:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.__DefaultPALDelimiters">
+	<summary>
+ [Private, Shared] Default format string to use for all new PAL timecode instances.  Modified with <i>SetDefaultPALDelimiters</i>.
+ </summary>
+</member><member name="F:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.__DefaultFilmDelimiters">
+	<summary>
+ [Private, Shared] Default format string to use for all new Film timecode instances.  Modified with <i>SetDefaultFilmDelimiters</i>.
+ </summary>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.CompareTimes(System.String,System.String)">
+	<summary>
+ [Shared] Compares two timecode values (in string format), returning <i>-1</i>, <i>0</i>, or
+ <i>1</i> if the first value is less than, equal to, or greater than the second
+ value, respectively.
+ </summary>
+	<param name="time1">First timecode parameter in string format</param>
+	<param name="time2">Second timecode parameter in string format</param>
+	<returns><i>-1</i>, <i>0</i>, or <i>1</i> if time1 is &lt;, =, or &gt; time2, respectively</returns>
+	<remarks>Use to determine if one timecode value is less than, equal to, or greater than another.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.SetDefaultNTSCDelimiters(System.String)">
+	<summary>
+ [Shared] Set the default format string to use for new instances of cTimecode_MRJ using the NTSC format.
+ </summary>
+	<param name="formatStr">Format string to use (e.g. "%2.2u:%2.2u:%2.2u:%2.2u" for "00:00:00:00")</param>
+	<remarks>Use to set the default format string for NTSC timecodes.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.SetDefaultPALDelimiters(System.String)">
+	<summary>
+ [Shared] Set the default format string to use for new instances of cTimecode_MRJ using the PAL format.
+ </summary>
+	<param name="formatStr">Format string to use (e.g. "%2.2u:%2.2u:%2.2u;%2.2u" for "00:00:00;00")</param>
+	<remarks>Use to set the default format string for PAL timecodes.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.SetDefaultFilmDelimiters(System.String)">
+	<summary>
+ [Shared] Set the default format string to use for new instances of cTimecode_MRJ using the Film format.
+ </summary>
+	<param name="formatStr">Format string to use (e.g. "%2.2u:%2.2u:%2.2u:%2.2u" for "00:00:00:00")</param>
+	<remarks>Use to set the default format string for Film timecodes.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.Test">
+	<summary>
+ [Shared] Performs a spot test of the <i>cTimecode_MRJ</i> class to ensure proper operation.
+ Returns <i>True</i> if test succeeds.
+ </summary>
+	<returns><i>True</i> if test is passed.  <i>False</i> if test fails.</returns>
+	<remarks>Use to test the class for proper implementation.</remarks>
+</member><member name="F:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ._TCFormat">
+	<summary>
+ [Private] Current timecode format (NTSC, PAL or Film) of this object.
+ </summary>
+</member><member name="F:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ._DropFrame">
+	<summary>
+ [Private] Indicates if this timecode object is using the Drop Frame mode (always <i>False</i> if not NTSC format).
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ._AbsFrames">
+	<summary>
+ [Private] Absolute number of frames represented by this timecode object.  Internal data representation of the timecode object.
+ </summary>
+</member><member name="F:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ._Delimiters">
+	<summary>
+ [Private] Format string delimiters (one per timecode format) to use with this particular timecode object.  (Set in constructor.)
+ </summary>
+</member><member name="P:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.TCFormat">
+	<summary>
+ Sets or returns the current timecode format (NTSC, PAL or Film).
+ </summary>
+	<value>Current timecode format (NTSC, PAL or Film)</value>
+	<returns><i>eTimecodeFormat</i></returns>
+	<remarks>Use to set/read timecode format (NTSC, PAL or Film).</remarks>
+</member><member name="P:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.DropFrame">
+	<summary>
+ For NTSC timecode, indicates if timecode is in Drop Frame format.
+ </summary>
+	<value>Indicates if timecode is in Drop Frame format.</value>
+	<returns><i>True</i> if format is NTSC Drop Frame.  <i>False</i> otherwise.</returns>
+	<remarks>Use to indicate Drop Frame format (ignored if timecode format is not NTSC).</remarks>
+</member><member name="P:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.Timecode">
+	<summary>
+ Sets or returns a string representation of the current timecode value using the 
+ current formatting delimiters.  (When set, assumes an HH:MM:SS:FF configuration, 
+ ignoring the delimiters in between the values.)
+ </summary>
+	<value>String representation of the current timecode value.</value>
+	<returns>String representation of the current timecode value.</returns>
+	<exception cref="T:SMT.Multimedia.Utility.Timecode.InvalidTimecodeException">Thrown when <i>value</i> is invalid</exception>
+	<remarks>Use to set/read timecode using a string representation.</remarks>
+</member><member name="P:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.Hours">
+	<summary>
+ Sets or returns the Hours portion of the current timecode value.
+ </summary>
+	<value>Hours portion of the current timecode value.</value>
+	<returns>Hours portion of the current timecode value.</returns>
+	<remarks>Use to set/read the Hours portion of the current timecode value.</remarks>
+</member><member name="P:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.Minutes">
+	<summary>
+ Sets or returns the Minutes portion of the current timecode value.
+ </summary>
+	<value>Minutes portion of the current timecode value.</value>
+	<returns>Minutes portion of the current timecode value.</returns>
+	<remarks>Use to set/read the Minutes portion of the current timecode value.</remarks>
+</member><member name="P:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.Seconds">
+	<summary>
+ Sets or returns the Seconds portion of the current timecode value.
+ </summary>
+	<value>Seconds portion of the current timecode value.</value>
+	<returns>Seconds portion of the current timecode value.</returns>
+	<remarks>Use to set/read the Seconds portion of the current timecode value.</remarks>
+</member><member name="P:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.Frames">
+	<summary>
+ Sets or returns the Frames portion of the current timecode value.
+ </summary>
+	<value>Frames portion of the current timecode value.</value>
+	<returns>Frames portion of the current timecode value.</returns>
+	<remarks>Use to set/read the Frames portion of the current timecode value.</remarks>
+</member><member name="P:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.AbsFrames">
+	<summary>
+ Sets or returns the absolute number of frames represented by the current timecode value.
+ </summary>
+	<value>Absolute number of frames represented by the current timecode value.</value>
+	<returns>Absolute number of frames represented by the current timecode value.</returns>
+	<remarks>Use to set/read the absolute number of frames represented by the current timecode value.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.GetNTSCDropFrame(System.Int32,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+	<summary>
+ [Private] Calculates and returns the hours, minutes, seconds and frames of a timecode value
+ in NTSC-DF format given the absolute number of frames.
+ </summary>
+	<param name="frames">Absolute number of frames (in)</param>
+	<param name="hh">Hours (out)</param>
+	<param name="mm">Minutes (out)</param>
+	<param name="ss">Seconds (out)</param>
+	<param name="ff">Frames (out)</param>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.GetNTSCNonDropFrame(System.Int32,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+	<summary>
+ [Private] Calculates and returns the hours, minutes, seconds and frames of a timecode value
+ in NTSC-NDF format given the absolute number of frames.
+ </summary>
+	<param name="frames">Absolute number of frames (in)</param>
+	<param name="hh">Hours (out)</param>
+	<param name="mm">Minutes (out)</param>
+	<param name="ss">Seconds (out)</param>
+	<param name="ff">Frames (out)</param>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.GetPALNonDropFrame(System.Int32,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+	<summary>
+ [Private] Calculates and returns the hours, minutes, seconds and frames of a timecode value
+ in PAL format given the absolute number of frames.
+ </summary>
+	<param name="frames">Absolute number of frames (in)</param>
+	<param name="hh">Hours (out)</param>
+	<param name="mm">Minutes (out)</param>
+	<param name="ss">Seconds (out)</param>
+	<param name="ff">Frames (out)</param>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.GetFilmNonDropFrame(System.Int32,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+	<summary>
+ [Private] Calculates and returns the hours, minutes, seconds and frames of a timecode value
+ in Film format given the absolute number of frames.
+ </summary>
+	<param name="frames">Absolute number of frames (in)</param>
+	<param name="hh">Hours (out)</param>
+	<param name="mm">Minutes (out)</param>
+	<param name="ss">Seconds (out)</param>
+	<param name="ff">Frames (out)</param>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.SetNTSCDropFrame(System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ [Private] Sets the current timecode to NTSC-DF format with the given value.
+ </summary>
+	<param name="hh">Hours</param>
+	<param name="mm">Minutes</param>
+	<param name="ss">Seconds</param>
+	<param name="ff">Frames</param>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.SetNTSCNonDropFrame(System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ [Private] Sets the current timecode to NTSC-NDF format with the given value.
+ </summary>
+	<param name="hh">Hours</param>
+	<param name="mm">Minutes</param>
+	<param name="ss">Seconds</param>
+	<param name="ff">Frames</param>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.SetPALNonDropFrame(System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ [Private] Sets the current timecode to PAL-NDF format with the given value.
+ </summary>
+	<param name="hh">Hours</param>
+	<param name="mm">Minutes</param>
+	<param name="ss">Seconds</param>
+	<param name="ff">Frames</param>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.SetFilmNonDropFrame(System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ [Private] Sets the current timecode to Film-NDF format with the given value.
+ </summary>
+	<param name="hh">Hours</param>
+	<param name="mm">Minutes</param>
+	<param name="ss">Seconds</param>
+	<param name="ff">Frames</param>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.Add(SMT.Multimedia.Utility.Timecode.cTimecode_MRJ)">
+	<summary>
+ Add the specified timecode to the current timecode.
+ </summary>
+	<param name="aTimecode">Timecode to add</param>
+	<remarks>Use to add one timecode value to another.</remarks>
+	<exception cref="T:SMT.Multimedia.Utility.Timecode.TCFormatMismatchException">Thrown if the format of the specified 
+ timecode object does not match the current object's format</exception>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.Add(System.Int32)">
+	<summary>
+ Add the specified number of frames to the current timecode.
+ </summary>
+	<param name="frames">Number of frames to add</param>
+	<remarks>Use to add a number of frames to the current timecode.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.Assign(SMT.Multimedia.Utility.Timecode.cTimecode_MRJ)">
+	<summary>
+ Assign the values of the specified timecode object to this one.
+ </summary>
+	<param name="aTimecode">Timecode object to copy</param>
+	<remarks>Use to assign the values of one timecode object to another.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.Clear">
+	<summary>
+ Sets the timecode value to zero without affecting other settings 
+ (e.g. TCFormat or DropFrame).
+ </summary>
+	<remarks>Use to set the timecode value to zero.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.CompareTo(SMT.Multimedia.Utility.Timecode.cTimecode_MRJ)">
+	<summary>
+ Compares the instance to a specified cTimecode object and 
+ returns an indication of their relative values.
+ </summary>
+	<param name="aTimecode">A cTimecode object to compare to</param>
+	<returns>A signed number indicating the relative values of this 
+ instance and the value parameter.  (Less than zero indicates that 
+ this instance is less than the given object.  Zero indicates that 
+ the two are of equal value, and greater than zero indicates that 
+ this instance is greater than the given object.)</returns>
+	<exception cref="T:SMT.Multimedia.Utility.Timecode.TCFormatMismatchException">Thrown if the given object 
+ is not the same timecode format as the instance.</exception>
+	<remarks>Compares the instance to another cTimecode object.  
+ Before comparing, be sure both objects are of the same timecode 
+ format.  If the given object is <i>Nothing</i> then a value of <i>1</i>
+ is returned.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.ConvertTo(SMT.Multimedia.Utility.Timecode.eTimecodeFormat,System.Boolean)">
+	<summary>
+ Convert the current timecode to an alternate timecode format, maintaining a comparable 
+ time offset as accurately as possible.  (Note, not all timecode formats accurately 
+ represent real time -- e.g. NTSC-NDF.)
+ </summary>
+	<param name="aTCFormat">Timecode format to convert to</param>
+	<param name="df">Drop frame indicator (optional, ignored if not NTSC)</param>
+	<remarks>Use to convert current timecode to an alternate timecode format.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.ConvertToNTSC(System.Boolean)">
+	<summary>
+ Convert the current timecode to NTSC.  See <i>ConvertTo</i>.
+ </summary>
+	<param name="df">Drop Frame indicator</param>
+	<remarks>Use to convert current timecode to NTSC-DF.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.ConvertToPAL">
+	<summary>
+ Convert the current timecode to PAL.  See <i>ConvertTo</i>.
+ </summary>
+	<remarks>Use to convert current timecode to PAL.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.ConvertToFilm">
+	<summary>
+ Convert the current timecode to Film.  See <i>ConvertTo</i>.
+ </summary>
+	<remarks>Use to convert current timecode to Film.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.Duplicate">
+	<summary>
+ Create a new duplicate of the current object instance.
+ </summary>
+	<returns>Duplicate object instance</returns>
+	<remarks>Use to perform a deep copy of the current object 
+ and return the results in a new instance.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.GetTimeCodes(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+	<summary>
+ Get the individual hour, minute, second and frame values for the current timecode.
+ </summary>
+	<param name="hh">Hours (out)</param>
+	<param name="mm">Minutes (out)</param>
+	<param name="ss">Seconds (out)</param>
+	<param name="ff">Frames (out)</param>
+	<remarks>Use to get the hours, minutes, seconds and frames of the current timecode.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.IsWithin(SMT.Multimedia.Utility.Timecode.cTimecode_MRJ,SMT.Multimedia.Utility.Timecode.cTimecode_MRJ)">
+	<summary>
+ Determines if the instance falls within the time period starting 
+ at the given timecode and lasting for the given duration.
+ </summary>
+	<param name="aTimecode">Start timecode to which to compare</param>
+	<param name="aDuration">Duration timecode to which to compare</param>
+	<returns><i>True</i> if the instance falls within the period described</returns>
+	<exception cref="T:SMT.Multimedia.Utility.Timecode.TCFormatMismatchException">Thrown if the given objects 
+ are not the same timecode format as the instance.</exception>
+	<remarks>Determines if the instance falls within the time period 
+ described, indicating <i>False</i> if either <i>aTimecode</i> 
+ or <i>aDuration</i> are Nothing.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.IsBetween(SMT.Multimedia.Utility.Timecode.cTimecode_MRJ,SMT.Multimedia.Utility.Timecode.cTimecode_MRJ)">
+	<summary>
+ Determines if the instance falls between the two specified timecodes.
+ </summary>
+	<param name="time1">First timecode to which to compare</param>
+	<param name="time2">Second timecode to which to compare</param>
+	<returns><i>True</i> if the instance falls within the period described, inclusively</returns>
+	<exception cref="T:SMT.Multimedia.Utility.Timecode.TCFormatMismatchException">Thrown if the given objects 
+ are not the same timecode format as the instance.</exception>
+	<remarks>Determines if the instance falls within the time period 
+ described by the two timecodes inclusively, indicating <i>False</i> 
+ if either <i>aTimecode</i> or <i>aDuration</i> 
+ are Nothing.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.Reset">
+	<summary>
+ Resets the values of this timecode object, including format delimiters (NTSC-NDF 00:00:00:00).
+ </summary>
+	<remarks>Use to reset the values of this timecode object.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.SetDelimiters(SMT.Multimedia.Utility.Timecode.eTimecodeFormat,System.String)">
+	<summary>
+ Set the delimiter characters to use after the Hours, Minutes and Seconds values when 
+ converting the specified timecode format to a string representation.
+ </summary>
+	<param name="aTCFormat">The timecode format to specify delimiters for</param>
+	<param name="formatStr">A string of 3 characters representing the 3 different delimiters
+ (e.g. ":;." would give "01:02;03.04")</param>
+	<remarks>Use to set the delimiter characters for the specified timecode format.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.SetTimeCodes(System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Sets the current timecode to the given value based on this object's current timecode format (NTSC-DF/NDF, PAL or Film) .
+ </summary>
+	<param name="hh">Hours</param>
+	<param name="mm">Minutes</param>
+	<param name="ss">Seconds</param>
+	<param name="ff">Frames (<i>0</i> if none specified)</param>
+	<remarks>Use to set the timecode using Hours, Minutes, Seconds and (optionally) Frames</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.SetToDuration(SMT.Multimedia.Utility.Timecode.cTimecode_MRJ,SMT.Multimedia.Utility.Timecode.cTimecode_MRJ)">
+	<summary>
+ Set the timecode of the current timecode object to the absolute duration between
+ the two specified timecode objects.  Order of the two specified timecodes does 
+ not matter.  Current timecode object will have matching timecode format and 
+ <i>DropFrame</i> will be <i>False</i>.
+ </summary>
+	<param name="time1">First timecode</param>
+	<param name="time2">Second timecode</param>
+	<remarks>Use to set current timecode to the duration between two specified timecodes.</remarks>
+	<exception cref="T:SMT.Multimedia.Utility.Timecode.TCFormatMismatchException">Thrown if the timecode formats of the two specified timecodes do not match.</exception>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.Subtract(SMT.Multimedia.Utility.Timecode.cTimecode_MRJ)">
+	<summary>
+ Subtract the specified timecode from the current timecode value.  (May result in a 
+ negative value.)
+ </summary>
+	<param name="aTimecode">Timecode to subtract</param>
+	<remarks>Use to subtract one timecode value from another.</remarks>
+	<exception cref="T:SMT.Multimedia.Utility.Timecode.TCFormatMismatchException">Thrown if specified timecode's format 
+ does not match</exception>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.Subtract(System.Int32)">
+	<summary>
+ Subtract the specified number of frames from the current timecode value.  
+ (May result in a negative value.)
+ </summary>
+	<param name="frames">Number of frames to subtract</param>
+	<remarks>Use to subtract frames from the current timecode value.</remarks>
+</member><member name="M:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ.ToString">
+	<summary>
+ Returns the string representation of the current timecode value.
+ </summary>
+	<returns>String representation of timecode value.</returns>
+	<remarks>Use to get the string representation of the current timecode.</remarks>
+</member><member name="T:SMT.Multimedia.Utility.Timecode.cTimecode_MRJ">
+	<summary>
+ Class representing a timecode value (in either NTSC, PAL, or Film formats).
+ </summary>
+	<remarks>Use cTimecode to represent timecode values and perform 
+ timecode calculations, such as calculating duration.</remarks>
+</member><member name="T:SMT.DotNet.Reflection.Enums.eCodeProviderType">
+	<summary>
+ Code provider types.
+ </summary>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cPackHeader">
+	<summary>
+ 5.2.1-2
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cPacketHeader_Type1">
+	<summary>
+ For use with Navigation packets
+ </summary>
+	<remarks>5.2.2-1</remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cPacketHeader_Type2">
+	<summary>
+ For use with Video, Audio, and Subpicture packets
+ </summary>
+	<remarks>5.2.3-1, 5.2.4-1, 5.2.4-2, 5.2.4-3, 5.2.5-1, Annexes H/I</remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cNavPacket.cPCIPacket.cPCI_GI">
+	<summary>
+ 4.4.1
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cNavPacket.cPCIPacket.cNSML_AGLI">
+	<summary>
+ 4.4.2
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cNavPacket.cPCIPacket.cHLI">
+	<summary>
+ 4.4.3
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cNavPacket.cPCIPacket.cRECI">
+	<summary>
+ 4.4.4
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cNavPacket.cPCIPacket">
+	<summary>
+ 4.4
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cNavPacket.cDSIPacket.cDSI_GI">
+	<summary>
+ 4.5.1
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cNavPacket.cDSIPacket.cSML_PBI">
+	<summary>
+ 4.5.2 - INCOMPLETE IMPLEMENTATION
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cNavPacket.cDSIPacket.cSML_AGLI">
+	<summary>
+ 4.5.3
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cNavPacket.cDSIPacket.cVOBU_SRI">
+	<summary>
+ 4.5.4 - NOT IMPLEMENTED
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cNavPacket.cDSIPacket.cSYNCI">
+	<summary>
+ 4.5.5
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cNavPacket.cDSIPacket">
+	<summary>
+ 4.5
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cNavPacket">
+	<summary>
+ 5.2.2
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cVideoPacket">
+	<summary>
+ 5.2.3
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cAudioPacket">
+	<summary>
+ 5.2.4
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cSubpicturePacket">
+	<summary>
+ 5.2.5
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cPTM">
+	<summary>
+ 4.4.1 (4)
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack.cC_ELTM">
+	<summary>
+ 4.4.1 (7)
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cVOBPack">
+	<summary>
+ 5.2
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cSPU.cSPUH">
+	<summary>
+ 5.4.3.1
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cSPU.cSP_DCSQT.cSP_DCSQ.cSP_DCCMD.cCHG_COLCON_ex">
+	<summary>
+ NOT FULLY IMPLEMENTED
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cSPU.cSP_DCSQT.cSP_DCSQ.cSP_DCCMD">
+	<summary>
+ 5.4.3.4
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cSPU.cSP_DCSQT.cSP_DCSQ">
+	<summary>
+ 5.4.3.3-2
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cSPU.cSP_DCSQT">
+	<summary>
+ 5.4.3.3 - NOT FULLY IMPLEMENTED
+ </summary>
+	<remarks>It's kindofabitch. A lot of the work is done but the offsets need more attention. Just dont feel 
+ like doing it right now and there isn't a pressing need.</remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.VOB.cSPU">
+	<summary>
+ 5.4.3
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.Utility.Timecode.Consts.NTSC_DELIMITERS">
+	<summary>
+ [Shared, Read Only] Pattern of delimiters used to separate numeric values in NTSC timecode values.
+ (E.g. ":::" corresponds to values such as 00:00:00:00)
+ </summary>
+</member><member name="F:SMT.Multimedia.Utility.Timecode.Consts.PAL_DELIMITERS">
+	<summary>
+ [Shared, Read Only] Pattern of delimiters used to separate numeric values in PAL timecode values.
+ (E.g. "::;" corresponds to values such as 00:00:00;00)
+ </summary>
+</member><member name="F:SMT.Multimedia.Utility.Timecode.Consts.FILM_DELIMITERS">
+	<summary>
+ [Shared, Read Only] Pattern of delimiters used to separate numeric values in Film timecode values.
+ (E.g. ":::" corresponds to values such as 00:00:00:00)
+ </summary>
+</member><member name="T:SMT.Multimedia.Utility.Timecode.Consts">
+	<summary>
+ Constant values used by the cTimecode class.
+ </summary>
+</member><member name="P:SMT.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:SMT.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:SMT.My.Resources.Resources.InvalidFilmNDFTimecodeExceptionMsg">
+	<summary>
+  Looks up a localized string similar to Invalid Film timecode specified..
+</summary>
+</member><member name="P:SMT.My.Resources.Resources.InvalidNTSCDFTimecodeExceptionMsg">
+	<summary>
+  Looks up a localized string similar to Invalid NTSC-DF timecode specified..
+</summary>
+</member><member name="P:SMT.My.Resources.Resources.InvalidNTSCNDFTimecodeExceptionMsg">
+	<summary>
+  Looks up a localized string similar to Invalid NTSC-NDF timecode specified..
+</summary>
+</member><member name="P:SMT.My.Resources.Resources.InvalidPALNDFTimecodeExceptionMsg">
+	<summary>
+  Looks up a localized string similar to Invalid PAL timecode specified..
+</summary>
+</member><member name="P:SMT.My.Resources.Resources.InvalidTimecodeExceptionMsg">
+	<summary>
+  Looks up a localized string similar to Invalid timecode specified..
+</summary>
+</member><member name="P:SMT.My.Resources.Resources.TCFormatMismatchExceptionMsg">
+	<summary>
+  Looks up a localized string similar to Timecode formats do not match..
+</summary>
+</member><member name="T:SMT.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="F:SMT.Multimedia.Filters.MainConcept.ModuleConfig_Consts.EMC_ErrorConcealment">
+	<summary>
+EMC_ErrorConcealment
+GUID:
+{BB8F00E9-655B-47c4-966A-A4B4BBF8D2D2}
+Description:
+Sets the errors concealment mode.
+Type:
+VT_UI4
+Available Values:
+· 0 – Error concealment is disabled (default).
+· 1 – Error concealment is enabled, i.e. frames with errors are not shown.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.Filters.MainConcept.ModuleConfig_Consts.EMC_OSD">
+	<summary>
+5.18 EMC_OSD
+GUID:
+{ F5C51906-ED89-4C6E-9C37-A5CCB34F5389}
+Description:
+Enables/disables the option to display of the decoding statistical information.
+Type:
+VT_UI4
+Available Values:
+· 0 – Feature is disabled (default).
+· 1 – Feature is enabled.
+</summary>
+	<remarks></remarks>
+</member><member name="M:SMT.Multimedia.Players.DVD.Classes.cDetailedPlayLocation.#ctor(System.String)">
+	<summary>
+ Accepts a string created by this classes' ToString
+ </summary>
+	<param name="meString"></param>
+	<remarks></remarks>
+</member><member name="M:SMT.FileSystems.ISO9660.cISO9660_FileSystem.SeekToSector(System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Jump to a specific sector based on LBN and sector size
+ </summary>
+	<param name="pSector">LBN</param>
+	<param name="pSectorSize">Sector Size</param>
+	<returns>True if it's not EOF</returns>
+	<remarks>Starting from the beginning of the file</remarks>
+</member><member name="P:SMT.Multimedia.Players.M2TS.cM2TSPlayer.PTS_Current">
+	<summary>
+ Returns a 90kHz value.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SMT.Multimedia.Players.M2TS.cM2TSPlayer.PTS_Base">
+	<summary>
+ Returns a 90kHz value.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SMT.Multimedia.Players.M2TS.cM2TSPlayer.PTS_MAX">
+	<summary>
+ Returns a 90kHz value.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SMT.Multimedia.Players.M2TS.cM2TSPlayer.PTS_Duration">
+	<summary>
+ Returns a 90kHz value.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:SMT.Win.Processes.cProcessManager._Proc">
+	<summary>
+ Process instance tied to this object.
+ </summary>
+</member><member name="F:SMT.Win.Processes.cProcessManager._ProcessStarted">
+	<summary>
+ Indicates if this associated process has already been started.
+ </summary>
+</member><member name="F:SMT.Win.Processes.cProcessManager._Disposed">
+	<summary>
+ Indicates if this object has already been disposed off.
+ </summary>
+</member><member name="F:SMT.Win.Processes.cProcessManager._ShuttingDown">
+	<summary>
+ Indicates if this object's Shutdown method has been called.
+ </summary>
+</member><member name="F:SMT.Win.Processes.cProcessManager.ClientProcessID">
+	<summary>
+ Unique ID reference for tracking status (e.g. database key).
+ </summary>
+</member><member name="F:SMT.Win.Processes.cProcessManager.Name">
+	<summary>
+ Name of the object.
+ </summary>
+</member><member name="P:SMT.Win.Processes.cProcessManager.PID">
+	<summary>
+ Unique Process ID of the current running process (<c>-1</c> if none).
+ </summary>
+	<value>Windows Process ID (<c>-1</c> if none)</value>
+</member><member name="P:SMT.Win.Processes.cProcessManager.hasProcessStarted">
+	<summary>
+ Indicates if the associated process has been started.
+ </summary>
+	<value><c>True</c> if the process has been started</value>
+</member><member name="P:SMT.Win.Processes.cProcessManager.hasProcessExited">
+	<summary>
+ Indicates if the associated process has exited.
+ </summary>
+	<value><c>True</c> if the process has exited</value>
+</member><member name="E:SMT.Win.Processes.cProcessManager.evLogLineOutput">
+	<summary>
+ Event triggered each time a new line of text is output from the process log.
+ </summary>
+	<param name="ClientProcessID"></param>
+	<param name="Name">Object name</param>
+	<param name="PID">Windows Process ID</param>
+	<param name="Line">Line of text to add to log</param>
+	<remarks>Handle this event to capture the log output from the process.</remarks>
+</member><member name="E:SMT.Win.Processes.cProcessManager.evProcessExited">
+	<summary>
+ Event triggered when the process exits.
+ </summary>
+	<param name="ClientProcessID"></param>
+	<param name="Name">Object name</param>
+	<param name="PID">Windows Process ID</param>
+	<param name="Succeeded">Boolean indicating if the process succeeded or terminated with an exit code</param>
+	<remarks>Handle this event to capture the output status of the process.</remarks>
+</member><member name="M:SMT.Win.Processes.cProcessManager.#ctor(System.Int32,System.String)">
+	<summary>
+ Creates a new instance of the class, assigns its properties, 
+ and instantiates the process (but does not start it).
+ </summary>
+	<param name="aProcessID">Unique ID for tracking status</param>
+	<param name="aName">Name of this object</param>
+	<remarks>Use to create a new instance of the class for launching 
+ a process.</remarks>
+</member><member name="M:SMT.Win.Processes.cProcessManager.Dispose">
+	<summary>
+ Destructor.  Removes event handlers when object is destroyed.
+ </summary>
+	<remarks>Removes event handlers when object is destroyed.</remarks>
+</member><member name="M:SMT.Win.Processes.cProcessManager.Dispose(System.Boolean)">
+	<summary>
+ Disposing method.
+ </summary>
+	<param name="disposing">If <c>True</c>, method has been called 
+ directly or indirectly by user's code.  Both managed and unmanaged 
+ resources can be disposed.  If <c>False</c>, method has been 
+ called by the runtime from inside the finalizer, so other 
+ objects should not be referenced.  Only unmanaged resources 
+ can be disposed.</param>
+	<remarks>Used to dispose of the object's resources and end tracing.</remarks>
+</member><member name="M:SMT.Win.Processes.cProcessManager.Finalize">
+	<summary>
+ This finalizer will run only if the Dispose method does not 
+ get called.  It gives the base class the opportunity to 
+ finalize.
+ </summary>
+	<remarks>Do not provide finalize methods in types derived 
+ from this class.</remarks>
+</member><member name="M:SMT.Win.Processes.cProcessManager.CreateProcess">
+	<summary>
+ Creates a new instance of Process and populate it with standard settings.
+ </summary>
+	<returns>Process created</returns>
+</member><member name="M:SMT.Win.Processes.cProcessManager.StartProcess(System.String)">
+	<summary>
+ Start the current process with the specified command line arguments.
+ </summary>
+	<param name="CommandLine">String containing the command line arguments 
+ (optional, default = <c>""</c>)</param>
+</member><member name="M:SMT.Win.Processes.cProcessManager.Shutdown">
+	<summary>
+ Terminate the current process.
+ </summary>
+	<remarks>Removes event handlers and kills the associated process.</remarks>
+</member><member name="M:SMT.Win.Processes.cProcessManager.RunProcess(System.String)">
+	<summary>
+ Starts the process with the specified arguments.
+ </summary>
+	<returns><c>True</c> if process starts successfully</returns>
+	<remarks>Use to launch the process.</remarks>
+</member><member name="M:SMT.Win.Processes.cProcessManager.ProcessExited(System.Object,System.EventArgs)">
+	<summary>
+ Event handler for process exiting.  (Do not call directly.)
+ </summary>
+	<param name="sender">Process that triggered the event</param>
+	<param name="e">Event arguments</param>
+	<remarks>Do not call this method.</remarks>
+</member><member name="M:SMT.Win.Processes.cProcessManager.ProcessOutput(System.Object,System.Diagnostics.DataReceivedEventArgs)">
+	<summary>
+ Event handler for log output.  (Do not call directly.)
+ </summary>
+	<param name="sender">Process that triggered the event</param>
+	<param name="outLine">Line of log output text</param>
+	<remarks>Do not call this method.</remarks>
+</member><member name="T:SMT.Win.Processes.cProcessManager">
+	<summary>
+ Class representing an executable process.
+ </summary>
+	<remarks>This is a single-use class in which one instance may launch 
+ a single process.</remarks>
+</member><member name="M:SMT.Multimedia.Classes.cStreamInfo.SetupEx">
+	<summary>
+ Call this after the decoder's output pin has been connected
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Utility.Timecode.TimeCodeException">
+	<summary>
+ Inherits:  <i>System.Exception</i><br/><br/>
+ Base class for all Timecode-related exceptions.
+ </summary>
+</member><member name="T:SMT.Multimedia.Utility.Timecode.TCFormatMismatchException">
+	<summary>
+ Inherits:  <i>Javelin.Libraries.Common.Timecode.TimeCodeException</i><br/><br/>
+ Exception that is thrown when their is a mismatch of timecode formats (e.g. NTSC vs. PAL) 
+ between two timecode objects.
+ </summary>
+</member><member name="T:SMT.Multimedia.Utility.Timecode.InvalidTimecodeException">
+	<summary>
+ Inherits:  <i>Javelin.Libraries.Common.Timecode.TimeCodeException</i><br/><br/>
+ Exception that is thrown when the timecode specified is invalid.
+ </summary>
+</member><member name="M:SMT.Multimedia.Players.cBasePlayer.SetPlayerProperty(System.Int32,System.Int64,System.String)">
+	<summary>
+ Allows derived players to support customized properties without forcing the app to ctype the player to the current player type to access specialized property methods
+ </summary>
+	<param name="PropertyID"></param>
+	<param name="PropertyValue"></param>
+	<param name="PropetyString"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SMT.Multimedia.Players.cBasePlayer.AudioPresent">
+	<summary>
+ If there is an audio renderer in the graph this returns true.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SMT.Multimedia.Players.cBasePlayer.BasePlayerEventHandler(System.Int32,System.Int32,System.Int32)">
+	<summary>
+ WARNING: This method uses the OMNI-defined event values. Use with KeySD/KeyHD will result in unprediciable event evaluation.
+ </summary>
+	<param name="code"></param>
+	<param name="p1"></param>
+	<param name="p2"></param>
+	<returns>True if it has been handled here and should NOT be passed to the derived player.</returns>
+	<remarks></remarks>
+</member><member name="E:SMT.Multimedia.Players.cBasePlayer.evFilterCheckFailure">
+	<summary>
+ When an app receives this event it must kill this object immediately. This object can do nothing if it cannot build a graph.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Players.cBasePlayer">
+	<summary>
+ Each of the Player classes inherit this class.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.DotNet.Reflection.Invoke.GetCodeProvider(SMT.DotNet.Reflection.Enums.eCodeProviderType)">
+	<summary>
+ Creates a new Code Provider based on the Code Provider Type specified.
+ </summary>
+	<param name="aCodeProviderType">Code Provider Type to create</param>
+	<returns>New CodeDomProvider instance of the type specified</returns>
+</member><member name="M:SMT.DotNet.Reflection.Invoke.GetStandardParameters(System.String[])">
+	<summary>
+ Creates a new CompilerParameters instance with standard settings and the 
+ specified references.
+ </summary>
+	<param name="References">String array of file paths to strong-named assemblies</param>
+	<returns>New CompilerParameters instance</returns>
+	<remarks>Use to get a new CompilerParameters instance with standard settings.</remarks>
+</member><member name="M:SMT.DotNet.Reflection.Invoke.CompileFiles(System.String[],SMT.DotNet.Reflection.Enums.eCodeProviderType,System.String[],System.CodeDom.Compiler.CompilerParameters)">
+	<summary>
+ Compiles the specified source code files using the Code Provider Type, 
+ References and Compiler Parameters specified, if any.
+ </summary>
+	<param name="SourceFiles">String array of file paths</param>
+	<param name="aCodeProviderType">Code Provider Type to use</param>
+	<param name="References">String array of strong-named assemblies (optional, default = <c>Nothing</c>)</param>
+	<param name="Params">Compiler Parameters (optional, default = <c>Nothing</c>)</param>
+	<returns>Compiled assembly, or Nothing if compile failed</returns>
+	<remarks>Use to compile a collection of source files into an assembly.</remarks>
+</member><member name="M:SMT.DotNet.Reflection.Invoke.CompileSource(System.String,SMT.DotNet.Reflection.Enums.eCodeProviderType,System.String[],System.CodeDom.Compiler.CompilerParameters)">
+	<summary>
+ Compiles the specified source code string using the Code Provider Type, 
+ References and Compiler Parameters specified, if any.
+ </summary>
+	<param name="aSourceCode">String containing source code to compile</param>
+	<param name="aCodeProviderType">Code Provider Type to use</param>
+	<param name="References">String array of strong-named assemblies (optional, default = <c>Nothing</c>)</param>
+	<param name="Params">Compiler Parameters (optional, default = <c>Nothing</c>)</param>
+	<returns>Compiled assembly, or Nothing if compile failed</returns>
+	<remarks>Use to compile a collection of source files into an assembly.</remarks>
+	<exception cref="T:System.Exception">Thrown if there are errors during compile.</exception>
+</member><member name="M:SMT.DotNet.Reflection.Invoke.GetClassInstance(System.Reflection.Assembly,System.String)">
+	<summary>
+ Creates a new instance of the specified class in the given assembly.
+ </summary>
+	<param name="anAssembly">Assembly containing the class definition</param>
+	<param name="aClassName">String containing the name of the class to instantiate</param>
+	<returns>Returns the istantiated class object, or Nothing if none</returns>
+	<remarks>Use to instantiate a class in an assembly.</remarks>
+</member><member name="M:SMT.DotNet.Reflection.Invoke.GetClassInstanceByBaseName(System.Reflection.Assembly,System.String)">
+	<summary>
+ Creates a new instance of the first class found with the specified 
+ base class name in the given assembly.
+ </summary>
+	<param name="anAssembly">Assembly containing the class definition</param>
+	<param name="aBaseClassName">String containing the name of the base class to find</param>
+	<returns>Returns the istantiated class object, or Nothing if none</returns>
+	<remarks>Use to instantiate a class in an assembly that inherits a 
+ specified base class.</remarks>
+</member><member name="M:SMT.DotNet.Reflection.Invoke.GetPropertyValue(System.Object,System.String,System.Object[])">
+	<summary>
+ Get the value of the specified property from the specified class object.
+ </summary>
+	<param name="aClassInstance">Instance of the class object containing the property</param>
+	<param name="aPropertyName">String containing the name of the property</param>
+	<param name="Index">Index of the property value to retrieve (optional, default = <c>Nothing</c>)</param>
+	<returns>Object representing the return value from the property, or Nothing if none</returns>
+	<remarks>Use to get a property value from an instantiated class.</remarks>
+</member><member name="M:SMT.DotNet.Reflection.Invoke.SetPropertyValue(System.Object,System.Object,System.String,System.Object[])">
+	<summary>
+ Set the value of the specified property in the specified class object.
+ </summary>
+	<param name="aClassInstance">Instance of the class object containing the property</param>
+	<param name="value">Value to set</param>
+	<param name="aPropertyName">String containing the name of the property</param>
+	<param name="Index">Index of the property value to retrieve (optional, default = <c>Nothing</c>)</param>
+	<returns><c>True</c> if successful</returns>
+	<remarks>Use to set a property value in an instantiated class.</remarks>
+</member><member name="M:SMT.DotNet.Reflection.Invoke.ExecuteMethod(System.Object,System.String,System.Object[])">
+	<summary>
+ Invoke the specified method in the specified class object.
+ </summary>
+	<param name="aClassInstance">Instance of the class object containing the property</param>
+	<param name="aMethodName">String containing the name of the method</param>
+	<param name="args">Array of arguments to the method</param>
+	<returns>Object containing the result of the method call, or Nothing if none</returns>
+	<remarks>Use to invoke a method in an instantiated class.</remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_DOMAIN_CHANGE">
+	<summary>
+ Parameters: ( DWORD, void  
+ lParam1 is enum DVD_DOMAIN, and indicates the player'''s new domain
+ Raised from following domains: all
+ Signaled when ever the DVD player changes domains.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_TITLE_CHANGE">
+	<summary>
+ Parameters: ( DWORD, void  
+ lParam1 is the new title number.
+
+ Raised from following domains: DVD_DOMAIN_Title
+
+ Indicates when the current title number changes.  Title numbers
+ range 1 to 99.  This indicates the TTN, which is the title number
+ with respect to the whole disc, not the VTS_TTN which is the title
+ number with respect to just a current VTS.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_CHAPTER_START">
+	<summary>
+ Parameters: ( DWORD, void  
+ lParam1 is the new chapter number (which is the program number for 
+ One_Sequential_PGC_Titles.
+
+ Raised from following domains: DVD_DOMAIN_Title
+
+ Signales that DVD player started playback of a new program in the Title 
+ domain.  This is only signaled for One_Sequential_PGC_Titles.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_ANGLE_CHANGE">
+	<summary>
+ Parameters: ( DWORD, DWORD  
+ lParam1 is the number of available angles.
+ lParam2 is the current user angle number.
+
+ Raised from following domains: all
+
+ Signaled when ever either 
+   a the number of available angles changes, or  
+   b the current user angle number changes.
+ Current angle number can be changed automatically with navigation command 
+ on disc as well as through IDVDAnnexJ.
+ When the number of available angles is 1, the current video is not multiangle.
+ Angle numbers range from 1 to 9.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_BUTTON_CHANGE">
+	<summary>
+ Parameters: ( DWORD, DWORD  
+ lParam1 is the number of available buttons.
+ lParam2 is the current selected button number.
+
+ Raised from following domains: all
+
+ Signaled when ever either 
+   a the number of available buttons changes, or  
+   b the current selected button number changes.
+ The current selected button can be changed automatically with navigation 
+ commands on disc as well as through IDVDAnnexJ.  
+ Button numbers range from 1 to 36.  Selected button number 0 implies that
+ no button is selected.  Note that these button numbers enumerate all 
+ available button numbers, and do not always correspond to button numbers
+ used for IDVDAnnexJ::ButtonSelectAndActivate since only a subset of buttons
+ may be activated with ButtonSelectAndActivate.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_VALID_UOPS_CHANGE">
+	<summary>
+ Parameters: ( DWORD, void  
+ lParam1 is a VALID_UOP_SOMTHING_OR_OTHER bit-field stuct which indicates
+   which IDVDAnnexJ commands are explicitly disable by the DVD disc.
+
+ Raised from following domains: all
+
+ Signaled when ever the available set of IDVDAnnexJ methods changes.  This
+ only indicates which operations are explicited disabled by the content on 
+ the DVD disc, and does not guarentee that it is valid to call methods 
+ which are not disabled.  For example, if no buttons are currently present,
+ IDVDAnnexJ::ButtonActivate( won'''t work, even though the buttons are not
+ explicitly disabled. 
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_STILL_OFF">
+	<summary>
+ Parameters: ( void, void  
+
+   Indicating that any still that is currently active
+   has been released.
+
+ Raised from following domains: all
+
+ Signaled at the end of any still: PGC still, Cell Still, or VOBU Still.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_CURRENT_TIME">
+	<summary>
+ Parameters: ( DWORD, BOOL  
+ lParam1 is a DVD_TIMECODE which indicates the current 
+   playback time code in a BCD HH:MM:SS:FF format.
+ lParam2 == 0  --&gt;  time code is 25 frames/sec
+ lParam2 == 1  --&gt;  time code is 30 frames/sec (non-drop.
+ lParam2 == 2  --&gt;  time code is invalid (current playback time 
+                    cannot be determined for current title
+
+ Raised from following domains: DVD_DOMAIN_Title
+
+ Signaled at the beginning of every VOBU, which occurs every .4 to 1.0 sec.
+ This is only signaled for One_Sequential_PGC_Titles.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_ERROR">
+	<summary>
+ Parameters: ( DWORD, void 
+ lParam1 is an enum DVD_ERROR which notifies the app of some error condition.
+
+ Raised from following domains: all
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_WARNING">
+	<summary>
+ Parameters: ( DWORD, DWORD 
+ lParam1 is an enum DVD_WARNING which notifies the app of some warning condition.
+ lParam2 contains more specific information about the warning (warning dependent
+
+ Raised from following domains: all
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_NO_FP_PGC">
+	<summary>
+  Parameters : (void, void
+
+  Raised from the following domains : FP_DOM
+
+  Indicates that the DVD disc does not have a FP_PGC (First Play Program Chain
+  and the DVD Navigator will not automatically load any PGC and start playback.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_PARENTAL_LEVEL_CHANGE">
+	<summary>
+  Parameters : (LONG, void
+  lParam1 is a LONG indicating the new parental level.
+
+  Raised from the following domains : VMGM_DOM
+
+  Indicates that an authored Nav command has changed the parental level
+  setting in the player.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_PLAYBACK_STOPPED">
+	<summary>
+  Parameters : (DWORD, void
+
+  Raised from the following domains : All Domains
+
+ Indicates that playback has been stopped as the Navigator has completed
+ playback of the pgc and did not find any other branching instruction for
+ subsequent playback.
+
+  The DWORD returns the reason for the completion of the playback.  See
+  The DVD_PB_STOPPED enumeration for details.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_ANGLES_AVAILABLE">
+	<summary>
+  Parameters : (BOOL, void
+  lParam1 == 0 indicates that playback is not in an angle block and angles are
+             not available
+  lParam1 == 1 indicates that an angle block is being played back and angle changes
+             can be performed.
+
+  Indicates whether an angle block is being played and if angle changes can be 
+  performed. However, angle changes are not restricted to angle blocks and the
+  manifestation of the angle change can be seen only in an angle block.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_PLAYPERIOD_AUTOSTOP">
+	<summary>
+ Parameters: (void, void
+ Sent when the PlayPeriodInTitle completes or is cancelled
+
+ Raised from following domains : DVD_DOMAIN_TITLE
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_BUTTON_AUTO_ACTIVATED">
+	<summary>
+ Parameters: (DWORD button, void
+ Sent when a button is automatically activated
+
+ Raised from following domains : DVD_DOMAIN_MENU
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_CMD_START">
+	<summary>
+ Parameters: (CmdID, HRESULT
+ Sent when a command begins
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_CMD_END">
+	<summary>
+ Parameters: (CmdID, HRESULT
+ Sent when a command completes
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_DISC_EJECTED">
+	<summary>
+ Parameters: none
+ Sent when the nav detects that a disc was ejected and stops the playback
+ The app does not need to take any action to stop the playback.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_DISC_INSERTED">
+	<summary>
+ Parameters: none
+ Sent when the nav detects that a disc was inserted and the nav begins playback
+ The app does not need to take any action to start the playback.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_CURRENT_HMSF_TIME">
+	<summary>
+ Parameters: ( ULONG, ULONG  
+ lParam2 contains a union of the DVD_TIMECODE_FLAGS
+ lParam1 contains a DVD_HMSF_TIMECODE.  Assign lParam1 to a ULONG then cast the
+ ULONG as a DVD_HMSF_TIMECODE to use its values.
+
+ Raised from following domains: DVD_DOMAIN_Title
+
+ Signaled at the beginning of every VOBU, which occurs every .4 to 1.0 sec.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_KARAOKE_MODE">
+	<summary>
+ Parameters: ( BOOL, reserved  
+ lParam1 is either TRUE (a karaoke track is being played or FALSE (no karaoke data is being played.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_PROGRAM_CELL_CHANGE">
+	<summary>
+ Parameters: ( ULONG, ULONG 
+ Sent when current program ID and/or cell ID change
+ lParam1 contains the new Program ID
+ lParam2 contains the new Cell ID
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_TITLE_SET_CHANGE">
+	<summary>
+ Parameters: ( BYTE, void 
+ Sent when current VTS (Video Title Set changes
+ lParam1 contains the new VTSN (Video Title Set Number
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_PROGRAM_CHAIN_CHANGE">
+	<summary>
+ Parameters: ( WORD, void 
+ Sent when current PGC (Program Chain changes
+ lParam1 contains the new PGCN (Program Chain Number
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_VOBU_Offset">
+	<summary>
+ Parameters: ( BlockOffset, VTSN  
+ lParam1 is the block offset of the most recent VOBU.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_VOBU_Timestamp">
+	<summary>
+ Parameters: ( rtTimestamp.LowPart, rtTimeStamps.HighPart  
+ lParam1 is the dshow timestamp of the most recent VOBU.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_GPRM_Change">
+	<summary>
+ Parameters: ( GPRM index, GPRM value  
+ lParam1 is the GPRM index
+ loword(lParam2 is the new GPRM value, hiword(lParam2 is type
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_SPRM_Change">
+	<summary>
+ Parameters: ( SPRM index, SPRM value  
+ lParam1 is the SPRM index
+ loword(lParam2 is the new SPRM value, hiword(lParam2 is type
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_BeginNavigationCommands">
+	<summary>
+ Parameters: ( command type, reserved  
+ Sent when navigation commands are starting
+ </summary>
+	<remarks></remarks>
+</member><member name="F:SMT.Multimedia.DirectShow.DsEvCode.EC_DVD_NavigationCommand">
+	<summary>
+ Parameters: ( cmd.LowPart, cmd.HighPart  
+ 64 bits of DVD navigation command.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.IFO.cGlobalTT.cTT_SRP">
+	<summary>
+ VI4-13, 4.1.2-2
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.IFO.cVMG_PTL_MAIT">
+	<summary>
+ Ok, for US parental management:
+ 
+ Going to assume that this is the standard table (expected as a constant when country is US):
+ 
+ 0x4000 = RESERVED
+ 0x4000 = NC-17
+ 0x2000 = R
+ 0x1000 = RESERVED
+ 0x0800 = PG-13
+ 0x0400 = PG
+ 0x0200 = RESERVED
+ 0x0100 = G
+ 
+ So, when one wants to determine the parental level indicated by a parental id field:
+ 
+ 1) Confirm that the country is US (if it isn't then I don't know what to do)
+ 
+ 2) Analyize the upper byte only (because the lower doesn't ever seem to have values for US)
+ 
+ 3) Do a bitmask based on the above values
+ 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.IFO.cVXXM_PGCI_UT">
+	<summary>
+ For VMGM_PGCI_UT: VI4-15, 4.1.3
+ For VTSM_PGCI_UT: 
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.IFO.cPGC">
+	<summary>
+ PGCI - VI4-83, 4.3.1
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.IFO.cCMD">
+	<summary>
+ VI4-176, 4.6.2
+ </summary>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.IFO.cCellPlaybackInfo">
+	<summary>
+ C_PBI - 4.3.5-1
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SMT.Multimedia.Formats.DVD.IFO.cTitleAudioAttributes.cVTS_AST_ATRT.#ctor(System.Byte[]@,System.Int32)">
+	<summary>
+ Eight bytes comprising VTS_AST_ATRT (4.2.1-2, VI4-49)
+ </summary>
+	<param name="b"></param>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.DVD.IFO.cTitleAudioAttributes.cVTS_AST_ATRT">
+	<summary>
+ VTS_AST_ATRT (4.2.1-2, VI4-49)
+ </summary>
+	<remarks></remarks>
+</member><member name="P:SMT.Multimedia.Players.DVD.cDVDPlayer.CurrentDetailedPlayLocation">
+	<summary>
+ NOT IMPLEMENTED
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SMT.Multimedia.Players.DVD.cDVDPlayer.GlobalTTCount">
+	<summary>
+ Total number of global titles in current project.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:SMT.Multimedia.Players.DVD.cDVDPlayer.Region">
+	<summary>
+	</summary>
+	<value></value>
+	<returns>Zero based!</returns>
+	<remarks></remarks>
+</member><member name="T:SMT.Multimedia.Formats.RLE.DVD_Subpicture_RLE">
+	<summary>
+ 5.4.3.2 - NOT NEAR COMPLETE
+ </summary>
+	<remarks>This is a sonofabich</remarks>
+</member><member name="M:SMT.Multimedia.Formats.StillImage.mBitmapEditor.ToggleSubpictures(System.String,System.String,SMT.Multimedia.Formats.StillImage.mBitmapEditor.sSubpictureToggleInfo[],System.Boolean)">
+	<summary>
+ So this method takes a 24-bit bitmap and will use provided coordinates to change the color of 
+ sections of the image to the user-provided color. Pretty simple but this should be a pixel-accurate
+ algorithm (better then using the .NET bitmap classes because who knows what they'd do to the image.
+ </summary>
+	<param name="TwentyFourBitSubpicturePath"></param>
+	<param name="OutputPath"></param>
+	<param name="Input"></param>
+	<param name="NTSC"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SMT.Multimedia.Formats.StillImage.mBitmapEditor.SwapTwoColors(System.String,System.String,SMT.Multimedia.Formats.StillImage.mBitmapEditor.sTwoColorSwap,System.Boolean)">
+	<summary>
+ So this method takes a 24-bit bitmap and will use provided coordinates to change the color of 
+ sections of the image to the user-provided color. Pretty simple but this should be a pixel-accurate
+ algorithm (better then using the .NET bitmap classes because who knows what they'd do to the image.
+ </summary>
+	<param name="TwentyFourBitSubpicturePath"></param>
+	<param name="OutputPath"></param>
+	<param name="Input"></param>
+	<param name="NTSC"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.ConvertUnicodeToTrimmedASCII(System.Byte[])">
+	<summary>
+ UNTESTED: Convert a unicode string to ASCII and trim leading and trailing white space characters.
+ </summary>
+	<param name="value">Byte array of double-byte unicode characters</param>
+	<returns>Trimmed ASCII string</returns>
+	<remarks>Use to convert an array of double-byte unicode characters to a trimmed ASCII string.</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.ConvertUnicodeToASCII(System.Byte[])">
+	<summary>
+ UNTESTED: Convert a unicode string to ASCII.
+ </summary>
+	<param name="value">Byte array of double-byte unicode characters</param>
+	<returns>ASCII string</returns>
+	<remarks>Use to convert an array of double-byte unicode characters to an ASCII string.</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.ConvertASCIIToString(System.Byte[])">
+	<summary>
+ UNTESTED: Convert an array of ASCII bytes to a string.
+ </summary>
+	<param name="Bytes">Array of ASCII bytes</param>
+	<returns>String</returns>
+	<remarks>Use to convert an array of ASCII bytes to a string.</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.QuoteString(System.String)">
+	<summary>
+ Put double quotes (Chr(34)) on either side of the given string.
+ </summary>
+	<param name="aString">String to quote</param>
+	<returns>New string with quotes on either side of the original string</returns>
+	<remarks>Use to place quotes around an existing string.</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.RemoveTrailingNullBytes(System.Byte[],System.Boolean)">
+	<summary>
+ UNTESTED: Remove all trailing null bytes (0x00) from the given byte array.
+ </summary>
+	<param name="Bytes">Array of bytes</param>
+	<param name="LeaveLastByte0">Add zero byte at end of array (optional, default = <c>False</c>)</param>
+	<returns>Modified array of bytes</returns>
+	<remarks>Use to trim the trailing null bytes from an array.</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.SwabBytes(System.Byte[])">
+	<summary>
+ UNTESTED: Swaps each odd-numbered byte in an array of Bytes with the subsequent even-numbered byte.
+ </summary>
+	<param name="Bytes">Array of bytes</param>
+	<returns>A new byte array with values swapped.</returns>
+	<remarks>Use to swap the order of bytes an array without modifying the original array.</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.BinToDec(System.String,System.Boolean)">
+	<summary>
+ UNTESTED: Convert a String of binary digits to a Long Integer.  String must contain only 
+ binary digits ("0" and "1") and be no more than 64 characters long (additional 
+ characters are ignored).
+ </summary>
+	<param name="value">String of binary digits (e.g. "01100100")</param>
+	<param name="isSigned"><c>True</c> Binary represents a signed value (optional, default = <c>False</c>)</param>
+	<returns>Long Integer</returns>
+	<remarks>Use to convert a string of binary digits to a decimal value.</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.DecToBin(System.Int64,System.Int32)">
+	<summary>
+ UNTESTED: Convert a Long integer to a string of binary digits ("0" and "1").
+ </summary>
+	<param name="value">Decimal value to convert</param>
+	<param name="padDigits">Minimum number of digits to output for left-padding (option, default = <c>0</c></param>
+	<returns>String of binary digits ("0" and "1")</returns>
+	<remarks>Use to convert a decimal number to a string of binary digits.</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.DecToBin(System.Int32,System.Int32)">
+	<summary>
+ UNTESTED: Convert an Integer to a string of binary digits ("0" and "1").
+ </summary>
+	<param name="value">Decimal value to convert</param>
+	<param name="padDigits">Minimum number of digits to output for left-padding (option, default = <c>0</c></param>
+	<returns>String of binary digits ("0" and "1")</returns>
+	<remarks>Use to convert a decimal number to a string of binary digits.</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.DecToBin(System.Int16,System.Int32)">
+	<summary>
+ UNTESTED: Convert a Short integer to a string of binary digits ("0" and "1").
+ </summary>
+	<param name="value">Decimal value to convert</param>
+	<param name="padDigits">Minimum number of digits to output for left-padding (option, default = <c>0</c></param>
+	<returns>String of binary digits ("0" and "1")</returns>
+	<remarks>Use to convert a decimal number to a string of binary digits.</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.DecToBin(System.Byte,System.Int32)">
+	<summary>
+ UNTESTED: Convert a Byte to a string of binary digits ("0" and "1").
+ </summary>
+	<param name="value">Decimal value to convert</param>
+	<param name="padDigits">Minimum number of digits to output for left-padding (option, default = <c>0</c></param>
+	<returns>String of binary digits ("0" and "1")</returns>
+	<remarks>Use to convert a decimal number to a string of binary digits.</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.BitArrayToBin(System.Collections.BitArray,System.Int32,System.Int32)">
+	<summary>
+ UNTESTED: Convert a portion of a Bit Array to a binary string.
+ </summary>
+	<param name="value">Bit Array to convert</param>
+	<param name="index">Starting index within array (zero-based)</param>
+	<param name="count">Number of entries to convert</param>
+	<returns>Binary string (e.g. "01000010")</returns>
+	<remarks>Use to convert a portion of a Bit Array to a binary string representation.</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.BitArrayToBin(System.Collections.BitArray,System.Int32)">
+	<summary>
+ UNTESTED: Convert a portion of a Bit Array to a binary string.
+ </summary>
+	<param name="value">Bit Array to convert</param>
+	<param name="index">Starting index within array (optional, default=<c>0</c>)</param>
+	<returns>Binary string (e.g. "01000010")</returns>
+	<remarks>Use to convert a portion of a Bit Array to a binary string representation.</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.HexToDec(System.String)">
+	<summary>
+ UNTESTED: Convert a string representation of a hexidecimal number 
+ to a decimal value, ignoring leading and trailing white space.
+ </summary>
+	<param name="value">Hexidecimal string</param>
+	<returns>Long integer</returns>
+	<remarks>Use to convert a hexidecimal string to a decimal value</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.DecToHex(System.Int64)">
+	<summary>
+ UNTESTED: Convert a decimal value to a hexidecimal string.
+ </summary>
+	<param name="value">Decimal value to convert</param>
+	<returns>Hexidecimal string</returns>
+	<remarks>Use to convert a decimal value to a hexidecimal string.</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.IsEven(System.Int64)">
+	<summary>
+ UNTESTED: Determine if integer value is an even number.
+ </summary>
+	<param name="value">Value to check</param>
+	<returns><c>True</c> if value is even</returns>
+	<remarks>Use to determine if a value is an even number.</remarks>
+</member><member name="M:SMT.DotNet.Utility.mConversionsAndSuch.RemoveLeadingUnderscores(System.String)">
+	<summary>
+ UNTESTED: Remove the leading underscore(s) from a string.
+ </summary>
+	<param name="value">String to modify</param>
+	<returns>New string with leading underscores removed</returns>
+	<remarks>Use to remove leading underscore(s) from a string.</remarks>
+</member><member name="T:SMT.Multimedia.Utility.Timecode.eTimecodeFormat">
+	<summary>
+ Values corresponding to timecode format (NTSC, PAL or Film).
+ </summary>
+</member><member name="M:SMT.Win.SystemInfo.Initialize">
+	<summary>
+ Intializes private shared data by scanning Operating System 
+ and Computer System information.
+ </summary>
+</member><member name="M:SMT.Win.SystemInfo.#ctor">
+	<summary>
+ cSystemInfo class cannot be instantiated.
+ </summary>
+</member>
+</members>
+</doc>
